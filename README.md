@@ -336,7 +336,7 @@ Ampliarás el proyecto en dos partes independientes y observarás el comportamie
 **Requisitos:**
 
 - [ ] Crear las rutas `notes.edit` (GET) y `notes.update` (PUT/PATCH), dentro del grupo protegido por `auth`.
-- [ ] Agregar los métodos `edit` y `update` en `NoteController`, usando *route model binding*.
+- [ ] Agregar los métodos `edit` o `update` en `NoteController`, usando *route model binding*.
 - [ ] Validar los datos igual que en el registro de una nota nueva.
 - [ ] Crear la vista `resources/views/notes/edit.blade.php` con el formulario precargado con los datos actuales.
 - [ ] Agregar un botón o enlace **Editar** en cada nota del listado.
