@@ -112,9 +112,41 @@ Instala PHP, Composer y Laravel con el instalador oficial de [php.new](https://p
 ```bash
 /bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
 ```
+ó
+```bash
+curl -fsSL https://php.new/install/linux/8.4
+```
 
+Instalacion por partes:
+PHP:
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y php php-cli php-common php-curl php-mbstring php-xml php-zip php-mysql php-sqlite3 unzip curl git
+```
+
+Descarga el instalador oficial de Composer e instálalo globalmente:
+```bash
+curl -sS https://getcomposer.org/installer | php sudo mv composer.phar /usr/local/bin/composer
+```
+si es necesario hay que dar permisos
+```bash
+sudo chmod +x /usr/local/bin/composer
+```
+
+instalador global de laravel:
+```bash
+composer global require laravel/installer
+```
+Agrega la ruta global de Composer a tus variables de entorno PATH:
+```bash
+nano ~/.bashrc
+```
+Agrega la siguiente línea al final del archivo:
+```bash
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+```
 > [!NOTE]
-> La versión de PHP que indica la documentación oficial puede cambiar, así que consúltala antes.
+> La versión de PHP que indica la documentación oficial (de php.new) puede cambiar, así que consúltala antes.
 
 ###  2.2 Herd (macOS / Windows)
 
@@ -229,7 +261,7 @@ Con **Herd**, el sitio ya se sirve en su dominio `.test` y solo necesitas `npm r
 > [!NOTE]
 > **Herd Lite:** su `php.ini` es propio. Ejecuta `php --ini` para ver su ubicación real antes de activar extensiones.
 
-### 🏁 4.3 Verificación final
+###  4.3 Verificación final
 
 Abre la aplicación, regístrate en `/register`, entra a `/notes` y crea una nota. Si todo carga con estilos y guarda datos, el entorno está listo.
 
