@@ -338,7 +338,6 @@ Ampliarás el proyecto en dos partes independientes y observarás el comportamie
 - [ ] Crear las rutas `notes.edit` (GET) y `notes.update` (PUT/PATCH), dentro del grupo protegido por `auth`.
 - [ ] Agregar los métodos `edit` y `update` en `NoteController`, usando *route model binding*.
 - [ ] Validar los datos igual que en el registro de una nota nueva.
-- [ ] Impedir que un usuario edite notas de otro (respuesta 403).
 - [ ] Crear la vista `resources/views/notes/edit.blade.php` con el formulario precargado con los datos actuales.
 - [ ] Agregar un botón o enlace **Editar** en cada nota del listado.
 - [ ] Al actualizar, redirigir al listado con un mensaje de confirmación.
@@ -347,13 +346,13 @@ Ampliarás el proyecto en dos partes independientes y observarás el comportamie
 
 **Requisitos:**
 
-- [ ] Elegir **una** librería (ejemplos: `sweetalert2` o `toastify-js`).
+- [ ] Elegir **UNA** librería (ejemplos: `sweetalert2` o `toastify-js`).
 - [ ] Instalarla con npm y confirmar que aparece en `package.json`.
 - [ ] Importarla en `resources/js/app.js`.
-- [ ] Usarla en una acción del CRUD, por ejemplo:
+- [ ] Usarla en **UNA** acción del CRUD, por ejemplo:
   - confirmación visual antes de eliminar una nota, o
   - notificación emergente al crear o actualizar.
-- [ ] Verificar que funciona con `npm run dev`.
+- [ ] Verificar que funciona con `npm run dev`. (visualizar en navegador)
 
 ###  6.4 Entregables
 
